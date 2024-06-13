@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #000;
+    position: relative;
+}
+
+#bg-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Caveat', sans-serif;
+    font-weight: 700;
+    color: #ffe135;
+    -webkit-text-stroke: 1px #000;
+    font-size: 76px;
+    line-height: 225%; 
+    letter-spacing: 0.615em;
+}
+
+.banana {
+    width: 450px; /* Увеличено на 50% */
+    height: auto;
+    margin-bottom: 30px; /* Увеличено на 50% */
+    transition: transform 0.2s; /* Добавлен переход для плавной анимации */
+    cursor: pointer;
+}
+
+.banana:hover {
+    animation: shake 0.5s; /* Применение анимации при наведении */
+    animation-iteration-count: infinite; /* Бесконечное повторение анимации */
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.steam-button {
+    padding: 15px 30px;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 30px;
+    color: black;
+    background-color: #FFE135;
+    border: 1.5px solid black;
+    border-radius: 1344px;
+    text-decoration: none;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.1);
+    font-family: 'Caveat', sans-serif;
+    font-weight: 700;
+    transition: transform 0.3s ease-in-out;
+}
+.steam-button:hover {
+    animation: pulse 1s; /* Применение анимации при наведении */
+    animation-iteration-count: infinite; /* Бесконечное повторение анимации */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.steam-logo {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.links {
+    margin-top: 60px;
+    font-size: 1.5em;
+    font-family: 'Caveat', sans-serif;
+    font-weight: 400;
+}
+
+.links a {
+    margin: 0 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
